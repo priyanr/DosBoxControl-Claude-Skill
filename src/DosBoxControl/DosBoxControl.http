@@ -1,0 +1,37 @@
+@DosBoxControl_HostAddress = http://localhost:5164
+
+GET {{DosBoxControl_HostAddress}}/api/status
+Accept: application/json
+
+###
+
+POST {{DosBoxControl_HostAddress}}/api/open
+Content-Type: application/json
+
+{
+  "exePath": "C:\\Games\\SOMEGAME\\GAME.EXE"
+}
+
+###
+
+GET {{DosBoxControl_HostAddress}}/api/screenshot
+
+###
+
+POST {{DosBoxControl_HostAddress}}/api/keys
+Content-Type: application/json
+
+{
+  "keys": ["ENTER"]
+}
+
+###
+
+POST {{DosBoxControl_HostAddress}}/api/close
+Content-Type: application/json
+
+{
+  "force": false
+}
+
+###
